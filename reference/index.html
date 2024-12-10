@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSテスト用HTML</title>
+  </head>
+  <body>
+    <h1>JavaScript動作テスト</h1>
+    <p>このページのJavaScript動作をブラウザのコンソールで確認できます。</p>
+
+    <script>
+      // テスト用JavaScriptコード
+      console.log("--- JavaScriptの動作テスト開始 ---");
+      const a = {
+        prop: "0",
+      };
+      const b = {
+        prop: "0",
+      };
+      const c = a;
+
+      console.log(a === b);
+      console.log(a.prop === b.prop);
+      console.log(a === c);
+
+      console.log("--- JavaScriptの動作テスト終了 ---");
+    </script>
+  </body>
+</html>
