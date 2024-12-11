@@ -6,5 +6,5 @@
     "esModuleInterop": true, // ESモジュール互換
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["main.ts"] // コンパイル対象のファイル
+  "include": ["src/main.ts"] // コンパイル対象のファイル
 }
