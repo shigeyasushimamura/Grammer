@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>関数</title>
+  </head>
+  <body>
+    JSアウトプット
+    <script>
+      console.log("----------------");
+
+      let a = 0;
+      function fn1(arg1) {
+        arg1 = 1;
+        console.log("a:", arg1);
+      }
+      fn1(a);
+
+      let b = {
+        prop: 0,
+      };
+
+      // オブジェクトを引数に渡すと参照が渡されるので、関数内でオブジェくとのpropertyを変更すると参照元のpropertyも変更される
+      function fn2(arg2) {
+        arg2.prop = 777;
+        console.log("b:", b);
+      }
+
+      fn2(b);
+
+      let c = {
+        prop: 0,
+      };
+      function fn3(arg3) {
+        arg3 = {};
+        console.log("c:", c);
+      }
+
+      fn3(c);
+
+      const aa = {
+        prop: 0,
+      };
+
+      let { prop: P } = aa;
+      P = 1;
+      console.log(P, aa);
+
+      // 分割代入
+      function fn4({ prop }) {
+        prop = 4;
+        console.log("aa:", aa);
+      }
+
+      fn4(aa);
+
+      // 多階層
+      let z = {
+        prop1: {
+          prop2: 0,
+        },
+      };
+
+      let { prop1: hoge } = z;
+      hoge.prop2 = 11111;
+
+      console.log("hoge:", hoge);
+      console.log("z-prop1:", z.prop1);
+
+      console.log("----------------");
+    </script>
+  </body>
+</html>
